@@ -109,9 +109,13 @@ INSTALLATION
 ### Install from an Archive File
 
 Extract the archive file downloaded from [GitHub](https://github.com/kartik-v/yii2-app-practical-a) to
-a directory named `practical-a` or your app name, that is directly under the Web root.
+a directory named `practical-a` or your app name, that is directly under the Web root. 
 
-Then follow the instructions given in "GETTING STARTED".
+> Note: When using a archive file method, the vendor folder is not automatically created. You must 
+ extract the [yii2-advanced vendor folder from here](https://github.com/yiisoft/yii2/tree/master/apps/advanced/vendor).
+ Then you must copy this folder directly under the app root (i.e. `practical-a` directory).
+
+After this is complete, follow the instructions given in "GETTING STARTED".
 
 
 ### Install via Composer
