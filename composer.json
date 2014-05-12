@@ -45,7 +45,7 @@
 	"extra": {
 		"writable": [
 			"backend/runtime",
-			"backend/web/assets",
+			"backend/assets_b",
 
 			"frontend/runtime",
 			"assets"
