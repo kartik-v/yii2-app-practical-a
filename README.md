@@ -61,7 +61,7 @@ DIRECTORY STRUCTURE
 ```
 ROOT
     /                   contains the frontend entry script and web resources
-    /assets             contains the frontend web assets
+    /assets             contains the frontend web runtime assets
 common
 	config/				contains shared configurations
 	mail/				contains view files for e-mails
@@ -76,7 +76,7 @@ console
 	tests/				contains various tests for the console application
 backend
     /                   contains the backend entry script and web resources
-	assets/			    contains backend runtime assets
+	assets/			    contains backend web runtime assets
 	assets_b/			contains backend application assets such as JavaScript and CSS
 	config/				contains backend configurations
 	controllers/		contains Web controller classes
