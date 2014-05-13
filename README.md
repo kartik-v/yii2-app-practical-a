@@ -55,6 +55,13 @@ the `frontend` directory. The backend config, assets, models, controllers, views
 the `backend` directory. It is just the web access that is moved out to app root for frontend and to the backend root folder for 
 backend.
 
+SOME KEY ADDITIONS
+-------------------
+
+1. The template has some security preconfigured for users with Apache web servers. It has a default `.htaccess` security configuration setup.
+2. The template has prettyUrl enabled by default and the changes have been made to `.htaccess` as well as `urlManager`
+   component config in the common config directory.
+   
 DIRECTORY STRUCTURE
 -------------------
 
