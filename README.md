@@ -128,7 +128,7 @@ You can then install the application using the following command:
 
 ~~~
 php composer.phar global require "fxp/composer-asset-plugin:1.0.0-beta2"
-php composer.phar create-project --prefer-dist --stability=dev kartik-v/yii2-app-practical practical
+php composer.phar create-project --prefer-dist --stability=dev kartik-v/yii2-app-practical-a practical-a
 ~~~
 
 GETTING STARTED
