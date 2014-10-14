@@ -1,12 +1,12 @@
 v1.2.0
 ------
-2014-08-09: Version 1.1.0. 
+**Date:** 2014-08-09
 
 - Based on latest yii2-advanced-app until 09-Oct-2014.
 
 v1.1.0
 ------
-2014-06-30: Version 1.1.0. 
+**Date:** 2014-06-30
 
 - Based on latest yii2-advanced-app until 30-Jun-2014.
 - Included `.htaccess` for backend.
@@ -14,5 +14,9 @@ v1.1.0
 
 v1.0.0
 ------
-2014-06-01: Initial release. Based on latest yii2-advanced-app until 31-May-2014.
+**Date:** 2014-06-01
+
+- Initial release. 
+- Based on latest yii2-advanced-app until 31-May-2014.
+
 
