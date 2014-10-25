@@ -58,6 +58,8 @@ SOME KEY ADDITIONS
 1. The template has some security preconfigured for users with Apache web servers. It has a default `.htaccess` security configuration setup.
 2. The template has prettyUrl enabled by default and the changes have been made to `.htaccess` as well as `urlManager`
    component config in the common config directory.
+3. The template has isolated cookie settings for backend and frontend so that you can seamlessly access frontend and backend from same client. 
+   The config files includes special `identity` and `csrf` cookie parameter settings for backend. Edit it according to your needs if necessary.
    
 DIRECTORY STRUCTURE
 -------------------
@@ -147,6 +149,8 @@ the installed application. You only need to do these once for all.
 
 To login into the application, you need to first sign up, with any of your email address, username and password.
 Then, you can login into the application with same email address and password at any time.
+
+5. Edit the config files as needed. Especially set the correct paths for the user identity cookie in `backend/config/main-local.php`.
 
 TESTING
 -------
