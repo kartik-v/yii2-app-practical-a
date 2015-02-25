@@ -1,6 +1,12 @@
 Yii 2 Practical-A Application Template
 ======================================
 
+[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-app-practical-a/v/stable.svg)](https://packagist.org/packages/kartik-v/yii2-app-practical-a) 
+[![License](https://poser.pugx.org/kartik-v/yii2-app-practical-a/license.svg)](https://packagist.org/packages/kartik-v/yii2-app-practical-a)
+[![Total Downloads](https://poser.pugx.org/kartik-v/yii2-app-practical-a/downloads.svg)](https://packagist.org/packages/kartik-v/yii2-app-practical-a) 
+[![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-app-practical-a/d/monthly.png)](https://packagist.org/packages/kartik-v/yii2-app-practical-a)
+[![Daily Downloads](https://poser.pugx.org/kartik-v/yii2-app-practical-a/d/daily.png)](https://packagist.org/packages/kartik-v/yii2-app-practical-a)
+
 Yii 2 Practical-A Application Template is a skeleton Yii 2 application based on the 
 [yii2-advanced template](https://github.com/yiisoft/yii2-app-advanced/) best for 
 developing complex Web applications with multiple tiers. The template allows a 
