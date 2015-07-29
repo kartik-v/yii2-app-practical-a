@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------
 # Adds some security for the Apache server configuration for use with
-# yii2-app-practical-a template.
+# yii2-app-practical template.
 # @author Kartik Visweswaran <kartikv2@gmail.com>
 # @see http://demos.krajee.com/app-practical
 # ----------------------------------------------------------------------
