@@ -3,12 +3,15 @@ Change Log: `yii2-app-practical-a`
 
 ## Version 1.5.1
 
-**Date:** 2015-08-03
+**Date:** 2015-08-17
 
 - (enh #12): Improve security for .htaccess.
 - (bug #13): Set correct writable folders.
 - (bug #15): Correct `backend\assets_b\AppAsset` typo.
 - Based on latest yii2-advanced-app until 29-Jul-2015.
+- (bug #16): Fix `gii` config for backend prod.
+- (bug #17): Correct composer.json source for `yii2-app-practical-a`.
+- (enh #18): Include index files in `.gitignore`.
 
 ## Version 1.5.0
 

@@ -1,7 +1,7 @@
 {
-    "name": "kartik-v/yii2-app-practical",
-    "description": "Yii 2 Practical Application Template (based on advanced)",
-    "keywords": ["yii2", "framework", "practical", "application template"],
+    "name": "kartik-v/yii2-app-practical-a",
+    "description": "Yii 2 Practical-A Application Template (based on advanced)",
+    "keywords": ["yii2", "framework", "practical", "practical-a", "application template"],
     "homepage": "http://demos.krajee.com/app-practical",
     "type": "project",
     "license": "BSD-3-Clause",
@@ -13,8 +13,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/kartik-v/yii2-app-practical/issues?state=open",
-        "source": "https://github.com/kartik-v/yii2-app-practical/"
+        "issues": "https://github.com/kartik-v/yii2-app-practical-a/issues?state=open",
+        "source": "https://github.com/kartik-v/yii2-app-practical-a/"
     },
     "minimum-stability": "dev",
     "require": {
