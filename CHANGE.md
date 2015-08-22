@@ -13,6 +13,7 @@ Change Log: `yii2-app-practical-a`
 - (bug #17): Correct composer.json source for `yii2-app-practical-a`.
 - (enh #18): Include index files in `.gitignore`.
 - (enh #19): Upgrade migrations as per yii 2.0.6 Schema builder.
+- Update to use yii 2.0.6 archive.
 
 ## Version 1.5.0
 
