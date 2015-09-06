@@ -15,6 +15,7 @@ Change Log: `yii2-app-practical-a`
 - (enh #19): Upgrade migrations as per yii 2.0.6 Schema builder.
 - Update to use yii 2.0.6 archive.
 - Update sessions configuration for frontend and backend.
+- Include `urlManagerFE` component in backend config to enable access to frontend routes.
 
 ## Version 1.5.0
 

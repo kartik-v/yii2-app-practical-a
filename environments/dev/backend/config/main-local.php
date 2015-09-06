@@ -20,6 +20,13 @@ $config = [
             'name' => '_backendSessionId',
             'savePath' => __DIR__ . '/../runtime/sessions',  
         ],
+        // url manager to access frontend
+        'urlManagerFE' => [
+            'class' => 'yii\web\urlManager',
+            'baseUrl' => '/practical-a', // change to your app base folder name
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+        ]
     ],
 ];
 
