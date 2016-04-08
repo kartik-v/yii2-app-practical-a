@@ -67,6 +67,8 @@ SOME KEY ADDITIONS
 3. The template has isolated cookie settings for backend and frontend so that you can seamlessly access frontend and backend from same client. 
    The config files includes special `identity` and `csrf` cookie parameter settings for backend. Edit it according to your needs if necessary.
 
+Detailed documentation on yii2-app-advanced concepts and usage can be referred at [docs/guide/README.md](docs/guide/README.md).
+
 DIRECTORY STRUCTURE
 -------------------
 ```

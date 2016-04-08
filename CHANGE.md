@@ -1,14 +1,13 @@
-Change Log: `yii2-app-practical-a`
-==================================
+Change Log: `yii2-app-practical`
+================================
 
 ## Version 1.5.1
 
-**Date:** 2015-09-06
+**Date:** 2016-04-08
 
 - (enh #12): Improve security for .htaccess.
 - (bug #13): Set correct writable folders.
 - (bug #15): Correct `backend\assets_b\AppAsset` typo.
-- Based on latest yii2-advanced-app until 29-Jul-2015.
 - (bug #16): Fix `gii` config for backend prod.
 - (bug #17): Correct composer.json source for `yii2-app-practical-a`.
 - (enh #18): Include index files in `.gitignore`.
@@ -16,6 +15,7 @@ Change Log: `yii2-app-practical-a`
 - Update to use yii 2.0.6 archive.
 - Update sessions configuration for frontend and backend.
 - Include `urlManagerFE` component in backend config to enable access to frontend routes.
+- Based on latest yii2-advanced-app until 29-Jul-2015.
 
 ## Version 1.5.0
 
