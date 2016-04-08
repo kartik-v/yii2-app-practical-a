@@ -15,7 +15,7 @@ Change Log: `yii2-app-practical`
 - Update to use yii 2.0.6 archive.
 - Update sessions configuration for frontend and backend.
 - Include `urlManagerFE` component in backend config to enable access to frontend routes.
-- Based on latest yii2-advanced-app until 29-Jul-2015.
+- Based on latest yii2-advanced-app until 08-Apr-2016.
 
 ## Version 1.5.0
 
