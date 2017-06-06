@@ -28,3 +28,12 @@ composer.phar
 phpunit.phar
 # local phpunit config
 /phpunit.xml
+
+# backend files
+/backend/assets
+
+# frontend files
+/assets
+/index.php
+/index-test.php
+/robots.txt
