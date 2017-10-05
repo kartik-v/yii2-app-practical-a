@@ -1,7 +1,7 @@
 Applications
 ============
 
-There are three applications in practical template: frontend, backend and console. Frontend is typically what is presented
+There are three applications in advanced template: frontend, backend and console. Frontend is typically what is presented
 to end user, the project itself. Backend is admin panel, analytics and such functionality. Console is typically used for
 cron jobs and low-level server management. Also it's used during application deployment and handles migrations and assets.
 

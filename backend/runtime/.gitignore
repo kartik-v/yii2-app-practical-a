@@ -1,4 +1,2 @@
-/*
-!/sessions
-!/sessions/*
-!/.gitignore
+*
+!.gitignore

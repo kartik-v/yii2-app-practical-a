@@ -6,12 +6,19 @@ directory:
 
 ```json
 {
-    "name": "kartik-v/yii2-app-practical-a",
-    "description": "Yii 2 Practical-A Project Template",
-    "keywords": ["yii2", "framework", "practical", "project template"],
-    "homepage": "http://www.yiiframework.com/",
+    "name": "kartik-v/yii2-app-practical",
+    "description": "Yii 2 Practical Application Template",
+    "keywords": ["yii2", "framework", "practical", "advanced", "application template"],
+    "homepage": "http://demos.krajee.com/app-practical",
     "type": "project",
     "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Kartik Visweswaran",
+            "email": "kartikv2@gmail.com",
+            "homepage": "http://www.krajee.com/"
+        }
+    ],
     "support": {
         "issues": "https://github.com/yiisoft/yii2/issues?state=open",
         "forum": "http://www.yiiframework.com/forum/",

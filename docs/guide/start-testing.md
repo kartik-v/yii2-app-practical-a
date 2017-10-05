@@ -1,5 +1,5 @@
 Testing
-==================================
+===============================
 
 Yii2 Advanced Application uses Codeception as its primary test framework. 
 There are already some sample tests prepared in `tests` directory of `frontend`, `backend`, and `common`.
@@ -96,7 +96,7 @@ To execute acceptance tests do the following:
 1. Start web server:
 
     ```
-    php -S 127.0.0.1:8080 -t frontend
+    php -S 127.0.0.1:8080 -t frontend/web
     ```
 
 1. Now you can run all available tests

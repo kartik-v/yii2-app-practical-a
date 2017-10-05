@@ -24,7 +24,7 @@ frontend
 ...
 ```
 
-`www` が私たちのフロントエンドのディレクトリになりますので、`frontend` のコンテンツをこの中に移動します。
+`www` が私たちのフロントエンドのディレクトリになりますので、`frontend/web` のコンテンツをこの中に移動します。
 `backend/web` のコンテンツは `www/admin` に移動します。
  どちらの場合も、index.php および index-test.php の中のパスを修正する必要があります。
 
@@ -54,7 +54,7 @@ frontend
     ],
     'session' => [
         // これがバックエンドへのログインに使用されるセッションクッキーの名前
-        'name' => 'practical-backend',
+        'name' => 'practical-a-backend',
         'cookieParams' => [
             'path' => '/admin',
         ],
@@ -65,4 +65,4 @@ frontend
 ### 別のセットアップ
 
 テンプレートをセットアップする上記の方法があなたにとってはうまく行かない場合は、
-[Oleg Belostotskiy による構成とドキュメント](https://github.com/mickgeek/yii2-practical-one-domain-config) を試してみて下さい。
+[Oleg Belostotskiy による構成とドキュメント](https://github.com/mickgeek/yii2-advanced-one-domain-config) を試してみて下さい。

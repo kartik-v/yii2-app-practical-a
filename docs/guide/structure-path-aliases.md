@@ -14,5 +14,5 @@ Predefined path aliases
 - `@web` - base URL of currently running web application.
 - `@webroot` - web root directory of currently running web application.
 
-The aliases specific to the directory structure of the practical application
+The aliases specific to the directory structure of the advanced application
 (`@common`,  `@frontend`, `@backend`, and `@console`) are defined in `common/config/bootstrap.php`.

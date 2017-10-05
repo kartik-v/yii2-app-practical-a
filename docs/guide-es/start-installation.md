@@ -11,15 +11,14 @@ Si no tienes [Composer](http://getcomposer.org/), sigue las instrucciones en la 
 
 Con Composer instalado, puedes entonces instalar la aplicación usando los siguientes comandos:
 
-    composer global require "fxp/composer-asset-plugin:^1.3.1"
-    composer create-project --prefer-dist kartik-v/yii2-app-practical-a practical-a
+    composer create-project --prefer-dist kartik-v/yii2-app-practical-a yii-application
 
-El primer comando instala el [composer asset plugin](https://github.com/francoispluchino/composer-asset-plugin/) el cual permite el manejo de los paquetes de dependencias bower y npm a través de Composer. Sólo necesitas ejecutar este comando la primera vez. El segundo comando instala la aplicación avanzada en un directorio nombrado `practical-a`.
+El comando instala la aplicación avanzada en un directorio nombrado `yii-application`.
 Puedes elegir un nombre de directorio diferente si tu quieres.
 
 ## Instalación desde un Archivo
 
-Extrae el archivo descargado desde [yiiframework.com](http://www.yiiframework.com/download/) a directorio nombrado `practical` que está directamente bajo el Web root.
+Extrae el archivo descargado desde [yiiframework.com](http://www.yiiframework.com/download/) a directorio nombrado `advanced` que está directamente bajo el Web root.
 
 A continuación sigue las siguientes instrucciones dadas en la siguiente sub-sección.
 
@@ -31,13 +30,13 @@ Después de instalar la aplicación, tienes que realizar los siguientes pasos pa
 1. Ejecuta el comando `init` y selecciona `dev` como entorno.
 
    ```
-   php /path/to/practical-a/init
+   php /path/to/yii-application/init
    ```
 
    Por otra parte, en producción ejecuta `init` con el modo no interactivo.
 
    ```
-   php /path/to/practical-a/init --env=Production --overwrite=All
+   php /path/to/yii-application/init --env=Production --overwrite=All
    ```
 
 2. Crea una nueva base de datos y ajusta la configuración de `components['db']` en `common/config/main-local.php` como corresponde.
@@ -46,17 +45,17 @@ Después de instalar la aplicación, tienes que realizar los siguientes pasos pa
 
 4. Establece los documentos raíces(document-root) de tu servidor web:
 
-   - para frontend `/path/to/practical-a/` y usando la URL `http://frontend.dev/`
-   - para backend `/path/to/practical-a/backend/web/` y usando la URL `http://backend.dev/`
+   - para frontend `/path/to/yii-application/frontend/` y usando la URL `http://frontend.dev/`
+   - para backend `/path/to/yii-application/backend/` y usando la URL `http://backend.dev/`
 
    Para Apache podría ser lo siguiente:
 
    ```apache
        <VirtualHost *:80>
            ServerName frontend.dev
-           DocumentRoot "/path/to/practical-a/frontend/"
+           DocumentRoot "/path/to/yii-application/frontend/"
 
-           <Directory "/path/to/practical-a/frontend/">
+           <Directory "/path/to/yii-application/frontend/">
                # use mod_rewrite for pretty URL support
                RewriteEngine on
                # If a directory or a file exists, use the request directly
@@ -74,9 +73,9 @@ Después de instalar la aplicación, tienes que realizar los siguientes pasos pa
 
        <VirtualHost *:80>
            ServerName backend.dev
-           DocumentRoot "/path/to/practical-a/backend/web/"
+           DocumentRoot "/path/to/yii-application/backend/"
 
-           <Directory "/path/to/practical-a/backend/web/">
+           <Directory "/path/to/yii-application/backend/">
                # use mod_rewrite for pretty URL support
                RewriteEngine on
                # If a directory or a file exists, use the request directly
@@ -104,11 +103,11 @@ Después de instalar la aplicación, tienes que realizar los siguientes pasos pa
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
 
            server_name frontend.dev;
-           root        /path/to/practical-a/frontend/;
+           root        /path/to/yii-application/frontend/;
            index       index.php;
 
-           access_log  /path/to/practical-a/log/frontend-access.log;
-           error_log   /path/to/practical-a/log/frontend-error.log;
+           access_log  /path/to/yii-application/log/frontend-access.log;
+           error_log   /path/to/yii-application/log/frontend-error.log;
 
            location / {
                # Redirect everything that isn't a real file to index.php
@@ -142,11 +141,11 @@ Después de instalar la aplicación, tienes que realizar los siguientes pasos pa
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
 
            server_name backend.dev;
-           root        /path/to/practical-a/backend/web/;
+           root        /path/to/yii-application/backend/;
            index       index.php;
 
-           access_log  /path/to/practical-a/log/backend-access.log;
-           error_log   /path/to/practical-a/log/backend-error.log;
+           access_log  /path/to/yii-application/log/backend-access.log;
+           error_log   /path/to/yii-application/log/backend-error.log;
 
            location / {
                # Redirect everything that isn't a real file to index.php

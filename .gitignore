@@ -1,5 +1,7 @@
-# yii console command
+# yii console commands
 /yii
+/yii_test
+/yii_test.bat
 
 # phpstorm project files
 .idea
@@ -29,11 +31,10 @@ phpunit.phar
 # local phpunit config
 /phpunit.xml
 
-# backend files
-/backend/assets
+# vagrant runtime
+/.vagrant
 
-# frontend files
-/assets
+# root files
 /index.php
 /index-test.php
 /robots.txt

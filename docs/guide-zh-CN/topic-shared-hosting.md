@@ -18,7 +18,7 @@ frontend
 ...
 ```
 
-`www` 将是我们的前端目录，所以将 `frontend` 的内容移动到其中。 将 `backend/web` 的内容移动到 `www/admin`。 在每种情况下，您都需要调整 “index.php” 和 “index-test.php” 中的路径。
+`www` 将是我们的前端目录，所以将 `frontend/web` 的内容移动到其中。 将 `backend/web` 的内容移动到 `www/admin`。 在每种情况下，您都需要调整 “index.php” 和 “index-test.php” 中的路径。
 
 ### 调整 sessions 和 cookies 的配置
 
@@ -44,7 +44,7 @@ frontend
     ],
     'session' => [
         // this is the name of the session cookie used for login on the backend
-        'name' => 'practical-backend',
+        'name' => 'practical-a-backend',
         'cookieParams' => [
             'path' => '/admin',
         ],
@@ -55,4 +55,4 @@ frontend
 ### 自行配置
 
 如果上面提供的设置模板的方式不适合你，请尝试
-[configs and docs by Oleg Belostotskiy](https://github.com/mickgeek/yii2-practical-one-domain-config).
+[configs and docs by Oleg Belostotskiy](https://github.com/mickgeek/yii2-advanced-one-domain-config).

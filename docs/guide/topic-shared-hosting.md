@@ -1,7 +1,7 @@
-Using practical project template at shared hosting
-==================================================
+Using advanced project template at shared hosting
+=================================================
 
-Deploying an practical project template to shared hosting is a bit trickier than a basic one because it has two webroots,
+Deploying an advanced project template to shared hosting is a bit trickier than a basic one because it has two webroots,
 which shared hosting webservers don't support. We will need to adjust the directory structure so frontend URL will be
 `http://site.local` and backend URL will be `http://site.local/admin`.
 
@@ -22,7 +22,7 @@ frontend
 ...
 ```
 
-`www` will be our frontend directory so move the contents of `frontend` into it. Move the contents of `backend/web`
+`www` will be our frontend directory so move the contents of `frontend/web` into it. Move the contents of `backend/web`
 into `www/admin`. In each case you will need to adjust the paths in `index.php` and `index-test.php`.
 
 ### Adjust sessions and cookies
@@ -51,7 +51,7 @@ the frontend and backend will be sharing the same cookies, creating a clash. In 
     ],
     'session' => [
         // this is the name of the session cookie used for login on the backend
-        'name' => 'practical-backend',
+        'name' => 'practical-a-backend',
         'cookieParams' => [
             'path' => '/admin',
         ],
@@ -62,4 +62,4 @@ the frontend and backend will be sharing the same cookies, creating a clash. In 
 ### Alternative setup
 
 If the way to set up template provided above doesn't work for you, try
-[configs and docs by Oleg Belostotskiy](https://github.com/mickgeek/yii2-practical-one-domain-config).
+[configs and docs by Oleg Belostotskiy](https://github.com/mickgeek/yii2-advanced-one-domain-config).

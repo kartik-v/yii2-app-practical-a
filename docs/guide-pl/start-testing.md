@@ -99,7 +99,7 @@ Aby przeprowadzić testy akceptacyjne, wykonaj następujące kroki:
 6. Uruchom serwer web:
 
     ```
-    php -S 127.0.0.1:8080 -t frontend
+    php -S 127.0.0.1:8080 -t frontend/web
     ```
 
 7. Teraz już możesz uruchomić wszystkie dostępne testy

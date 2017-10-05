@@ -12,15 +12,14 @@ Si vous n'avez pas [Composer](http://getcomposer.org/), suivez les instructions 
 
 Une fois composer installé, vous pouvez l'utiliser pour installer l'application en utilisant les commandes suivantes :
 
-    composer global require "fxp/composer-asset-plugin:^1.3.1"
-    composer create-project --prefer-dist kartik-v/yii2-app-practical-a practical-a
+    composer create-project --prefer-dist kartik-v/yii2-app-practical-a yii-application
 
-La première commande installe le [greffon composer asset](https://github.com/francoispluchino/composer-asset-plugin/) 
-qui permet de gérer les dépendances de paquets bower et npm via Composer. Vous n'avez besoin d'exécuter cette commande qu'une fois pour toute. La deuxième commande installe l'application avancée dans un dossier nommé `practical-a`. Vous avez le droit de choisir un autre nom de dossier si vous le désirez.
+La commande installe l'application avancée dans un dossier nommé `yii-application`. 
+Vous avez le droit de choisir un autre nom de dossier si vous le désirez.
 
 ## Installation à partir d'un fichier archive
 
-Extrayez l'archive que vous avez téléchargée depuis [yiiframework.com](http://www.yiiframework.com/download/) dans un dossier nommé `practical` placé directement sous la racine Web.
+Extrayez l'archive que vous avez téléchargée depuis [yiiframework.com](http://www.yiiframework.com/download/) dans un dossier nommé `advanced` placé directement sous la racine Web.
 
 Ensuite suivez les instructions données dans la sous-section suivante.
 
@@ -32,32 +31,32 @@ Après que vous avez installé l'application, vous devez accomplir les étapes s
 1. Ouvrez un terminal et exécutez la commande `init` et sélectionnez `dev` en tant qu'environnement. 
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init
+   /path/to/php-bin/php /path/to/yii-application/init
    ```
 
    Si vous l'automatisez à l'aide d'un script, vous pouvez exécuter `init` en mode non interactif.
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init --env=Production --overwrite=All
+   /path/to/php-bin/php /path/to/yii-application/init --env=Production --overwrite=All
    ```
 
 2. Créez une nouvelle base de données et complétez la configuration de `components['db']` dans `common/config/main-local.php` en conséquence.
 
-3. Ouvrez un terminal, appliquez les migrations avec la commande `/path/to/php-bin/php /path/to/practical-a/yii migrate`.
+3. Ouvrez un terminal, appliquez les migrations avec la commande `/path/to/php-bin/php /path/to/yii-application/yii migrate`.
 
 4. Définissez la racine du document de votre serveur Web :
 
-   - pour l'interface utilisateur (frontend)  `/path/to/practical-a/frontend/`, en utilisant l'URL `http://frontend.dev/`
-   - pour l'interface d'administration (backend) `/path/to/practical-a/backend/web/`, en utilisant URL `http://backend.dev/`
+   - pour l'interface utilisateur (frontend)  `/path/to/yii-application/frontend/`, en utilisant l'URL `http://frontend.dev/`
+   - pour l'interface d'administration (backend) `/path/to/yii-application/backend/`, en utilisant URL `http://backend.dev/`
 
     Avec le serveur Apache ça pourrait ressembler à ceci :
 
    ```apache
        <VirtualHost *:80>
            ServerName frontend.dev
-           DocumentRoot "/path/to/practical-a/frontend/"
+           DocumentRoot "/path/to/yii-application/frontend/"
            
-           <Directory "/path/to/practical-a/frontend/">
+           <Directory "/path/to/yii-application/frontend/">
                # use mod_rewrite for pretty URL support
                RewriteEngine on
                # If a directory or a file exists, use the request directly
@@ -81,9 +80,9 @@ Après que vous avez installé l'application, vous devez accomplir les étapes s
        
        <VirtualHost *:80>
            ServerName backend.dev
-           DocumentRoot "/path/to/practical-a/backend/web/"
+           DocumentRoot "/path/to/yii-application/backend/"
            
-           <Directory "/path/to/practical-a/backend/web/">
+           <Directory "/path/to/yii-application/backend/">
                # use mod_rewrite for pretty URL support
                RewriteEngine on
                # If a directory or a file exists, use the request directly
@@ -117,11 +116,11 @@ Après que vous avez installé l'application, vous devez accomplir les étapes s
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
 
            server_name frontend.dev;
-           root        /path/to/practical-a/frontend/;
+           root        /path/to/yii-application/frontend/;
            index       index.php;
 
-           access_log  /path/to/practical-a/log/frontend-access.log;
-           error_log   /path/to/practical-a/log/frontend-error.log;
+           access_log  /path/to/yii-application/log/frontend-access.log;
+           error_log   /path/to/yii-application/log/frontend-error.log;
 
            location / {
                # Redirect everything that isn't a real file to index.php
@@ -160,11 +159,11 @@ Après que vous avez installé l'application, vous devez accomplir les étapes s
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
        
            server_name backend.dev;
-           root        /path/to/practical-a/backend/web/;
+           root        /path/to/yii-application/backend/;
            index       index.php;
        
-           access_log  /path/to/practical-a/log/backend-access.log;
-           error_log   /path/to/practical-a/log/backend-error.log;
+           access_log  /path/to/yii-application/log/backend-access.log;
+           error_log   /path/to/yii-application/log/backend-error.log;
        
            location / {
                # Redirect everything that isn't a real file to index.php

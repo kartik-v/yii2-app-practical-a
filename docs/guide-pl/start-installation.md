@@ -12,18 +12,14 @@ Jeśli nie posiadasz zainstalowanego [Composera](http://getcomposer.org/), zapoz
 
 Po zainstalowaniu Composera możesz zainstalować aplikację korzystając z poniższych komend:
 
-    composer global require "fxp/composer-asset-plugin:^1.3.1"
-    composer create-project --prefer-dist kartik-v/yii2-app-practical-a practical-a
+    composer create-project --prefer-dist kartik-v/yii2-app-practical-a yii-application
 
-Pierwsza z nich instaluje [plugin assetowy Composera](https://github.com/francoispluchino/composer-asset-plugin/), 
-pozwalający na zarządzanie pakietami zależności Bowera i NPM z poziomu Composera. Tę komendę trzeba uruchomić tylko raz 
-przed pierwszą instalacją Yii w systemie.  
-Druga komenda instaluje zaawansowaną aplikację w folderze o nazwie `practical-a`. Możesz, rzecz jasna, wybrać 
+Komenda instaluje zaawansowaną aplikację w folderze o nazwie `yii-application`. Możesz, rzecz jasna, wybrać 
 dowolną inną nazwę.
 
 ## Instalacja z pliku archiwum
 
-Wypakuj plik archiwum pobrany ze strony [yiiframework.com](http://www.yiiframework.com/download/) do folderu `practical`, 
+Wypakuj plik archiwum pobrany ze strony [yiiframework.com](http://www.yiiframework.com/download/) do folderu `advanced`, 
 znajdującego się bezpośrednio w głównym folderze serwera Web.
 
 Następnie przejdź do instrukcji w sekcji poniżej.
@@ -37,32 +33,32 @@ zrobić raz na każdym nowym środowisku.
 1. Otwórz terminal konsoli, uruchom komendę `init` i wybierz `dev` dla środowiska deweloperskiego (lub `prod` dla produkcyjnego).
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init
+   /path/to/php-bin/php /path/to/yii-application/init
    ```
 
    W przypadku zautomatyzowanego procesu z użyciem skryptu, możesz uruchomić `init` w trybie nieinteraktywnym.
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init --env=Production --overwrite=All
+   /path/to/php-bin/php /path/to/yii-application/init --env=Production --overwrite=All
    ```
 
 2. Stwórz nową bazę danych i zmodyfikuj odpowiednio jej dane w kluczu `components['db']` w pliku `common/config/main-local.php`.
 
-3. Uruchom migrację w terminalu konsoli za pomocą komendy `/path/to/php-bin/php /path/to/practical-a/yii migrate`.
+3. Uruchom migrację w terminalu konsoli za pomocą komendy `/path/to/php-bin/php /path/to/yii-application/yii migrate`.
 
 4. Ustaw docelowe foldery serwera Web:
 
-   - dla front-endu `/path/to/practical-a/` z użyciem adresu URL `http://frontend.dev/`
-   - dla back-endu `/path/to/practical-a/backend/web/` z użyciem adresu URL `http://backend.dev/`
+   - dla front-endu `/path/to/yii-application/frontend/` z użyciem adresu URL `http://frontend.dev/`
+   - dla back-endu `/path/to/yii-application/backend/` z użyciem adresu URL `http://backend.dev/`
 
    W przypadku serwera Apache konfiguracja może wyglądać następująco:
 
    ```apache
        <VirtualHost *:80>
            ServerName frontend.dev
-           DocumentRoot "/path/to/practical-a/frontend/"
+           DocumentRoot "/path/to/yii-application/frontend/"
            
-           <Directory "/path/to/practical-a/frontend/">
+           <Directory "/path/to/yii-application/frontend/">
                # uruchom mod_rewrite dla obslugi 'ladnych' adresow URL
                RewriteEngine on
                # jesli folder lub plik istnieje, po prostu wywolaj go
@@ -86,9 +82,9 @@ zrobić raz na każdym nowym środowisku.
        
        <VirtualHost *:80>
            ServerName backend.dev
-           DocumentRoot "/path/to/practical-a/backend/web/"
+           DocumentRoot "/path/to/yii-application/backend/"
            
-           <Directory "/path/to/practical-a/backend/web/">
+           <Directory "/path/to/yii-application/backend/">
                # uruchom mod_rewrite dla obslugi 'ladnych' adresow URL
                RewriteEngine on
                # jesli folder lub plik istnieje, po prostu wywolaj go
@@ -122,11 +118,11 @@ zrobić raz na każdym nowym środowisku.
            #listen [::]:80 default_server ipv6only=on; ## nasluchuj dla ipv6
 
            server_name frontend.dev;
-           root        /path/to/practical-a/frontend/;
+           root        /path/to/yii-application/frontend/;
            index       index.php;
 
-           access_log  /path/to/practical-a/log/frontend-access.log;
-           error_log   /path/to/practical-a/log/frontend-error.log;
+           access_log  /path/to/yii-application/log/frontend-access.log;
+           error_log   /path/to/yii-application/log/frontend-error.log;
 
            location / {
                # przekieruj wszystko, co nie jest rzeczywistym plikiem, na index.php
@@ -165,11 +161,11 @@ zrobić raz na każdym nowym środowisku.
            #listen [::]:80 default_server ipv6only=on; ## nasluchuj dla ipv6
        
            server_name backend.dev;
-           root        /path/to/practical-a/backend/web/;
+           root        /path/to/yii-application/backend/;
            index       index.php;
        
-           access_log  /path/to/practical-a/log/backend-access.log;
-           error_log   /path/to/practical-a/log/backend-error.log;
+           access_log  /path/to/yii-application/log/backend-access.log;
+           error_log   /path/to/yii-application/log/backend-error.log;
        
            location / {
                # przekieruj wszystko, co nie jest rzeczywistym plikiem, na index.php

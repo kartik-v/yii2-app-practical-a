@@ -16,11 +16,11 @@ return [
         'path' => 'dev',
         'setWritable' => [
             'backend/runtime',
-            'backend/web/assets',
+            'backend/assets',
             'frontend/runtime',
             'frontend/assets',
 +           'blog/runtime',
-+           'blog/web/assets',
++           'blog/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -36,11 +36,11 @@ return [
         'path' => 'prod',
         'setWritable' => [
             'backend/runtime',
-            'backend/web/assets',
+            'backend/assets',
             'frontend/runtime',
             'frontend/assets',
 +           'blog/runtime',
-+           'blog/web/assets',
++           'blog/assets',
         ],
         'setExecutable' => [
             'yii',

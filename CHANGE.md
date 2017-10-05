@@ -1,6 +1,12 @@
 Change Log: `yii2-app-practical-a`
 ==================================
 
+## Version 1.5.3
+
+**Date:** 2017-10-17
+
+- Based on latest yii2-advanced-app as of 05-Oct-2017.
+
 ## Version 1.5.2
 
 **Date:** 2017-06-06

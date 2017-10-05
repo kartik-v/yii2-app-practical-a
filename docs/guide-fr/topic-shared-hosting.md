@@ -17,7 +17,7 @@ frontend
 ...
 ```
 
-`www` sera notre dossier de l'interface utilisateur, c'est pourquoi il faut déplacer le contenu de `frontend` dedans. Déplacez le contenu de `backend/web` dans `www/admin`. Dans les deux cas, vous devez adapter les chemins dans `index.php` et `index-test.php`.
+`www` sera notre dossier de l'interface utilisateur, c'est pourquoi il faut déplacer le contenu de `frontend/web` dedans. Déplacez le contenu de `backend/web` dans `www/admin`. Dans les deux cas, vous devez adapter les chemins dans `index.php` et `index-test.php`.
 
 ### Adaptez les sessions et les témoins de connexion (cookies)
 
@@ -43,7 +43,7 @@ frontend
     ],
     'session' => [
         // ceci est le mom du témoin de connexion de session utilisé pour la connexion à l'interface d'administration
-        'name' => 'practical-backend',
+        'name' => 'practical-a-backend',
         'cookieParams' => [
             'path' => '/admin',
         ],
@@ -54,4 +54,4 @@ frontend
 ### Installation alternative
 
 Si la manière d'installer le modèle de projet présentée ci-dessus ne fonctionne pas dans votre cas, essayez
-[configurations et documentation d'Oleg Belostotskiy](https://github.com/mickgeek/yii2-practical-one-domain-config).
+[configurations et documentation d'Oleg Belostotskiy](https://github.com/mickgeek/yii2-advanced-one-domain-config).

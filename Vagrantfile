@@ -18,7 +18,7 @@ options = YAML.load_file config[:local]
 
 # check github token
 if options['github_token'].nil? || options['github_token'].to_s.length != 40
-  puts "You must place REAL GitHub token into configuration:\n/yii2-app-practical/vagrant/config/vagrant-local.yml"
+  puts "You must place REAL GitHub token into configuration:\n/yii2-app-practical-a/vagrant/config/vagrant-local.yml"
   exit
 end
 
@@ -48,7 +48,7 @@ Vagrant.configure(2) do |config|
   # network settings
   config.vm.network 'private_network', ip: options['ip']
 
-  # sync: folder 'yii2-app-practical' (host machine) -> folder '/app' (guest machine)
+  # sync: folder 'yii2-app-practical-a' (host machine) -> folder '/app' (guest machine)
   config.vm.synced_folder './', '/app', owner: 'vagrant', group: 'vagrant'
 
   # disable folder '/vagrant' (guest machine)

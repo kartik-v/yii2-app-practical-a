@@ -12,18 +12,15 @@ do guia definitivo para Yii 2.0 para instala-lo.
 
 Com o Composer instalado, você pode então instalar o template de projetos usando os seguintes comandos:
 
-    composer global require "fxp/composer-asset-plugin:^1.3.1"
-    composer create-project --prefer-dist kartik-v/yii2-app-practical-a practical-a
+    composer create-project --prefer-dist kartik-v/yii2-app-practical-a yii-application
     
-O primeiro comando instala o [composer asset plugin](https://github.com/francoispluchino/composer-asset-plugin/) que permite
-o gerenciamento de dependências de pacotes bower e npm através do Composer. Este comando só precisa ser executado uma vez, no momento da instalação.
-O segundo comando instala o template avançado de projetos no diretório `practical-a`.
+O comando instala o template avançado de projetos no diretório `yii-application`.
 Você pode escolher um diretório diferente se desejar.
 
 ## Instalação a partir de um arquivo
 
 Descompacte o arquivo baixado de [yiiframework.com](http://www.yiiframework.com/download/) para 
-um diretório com nome de `practical` no diretório raiz do servidor Web.
+um diretório com nome de `advanced` no diretório raiz do servidor Web.
 
 Então siga as instruções presentes na próxima subseção.
 
@@ -52,7 +49,7 @@ para inicializar a aplicação, sendo necessário realizá-los apenas uma vez no
 4. Configure a raiz dos documentos do seu servidor Web:
     
     - para o frontend `/caminho/para/aplicacao-yii/frontend/` usando URL `http://frontend.dev/`
-    - para o backend `/caminho/para/aplicacao-yii/backend/web/` usando URL `http://backend.dev/`
+    - para o backend `/caminho/para/aplicacao-yii/backend/` usando URL `http://backend.dev/`
     
     
     Exemplo de configuração para servidores Apache
@@ -80,9 +77,9 @@ para inicializar a aplicação, sendo necessário realizá-los apenas uma vez no
            
            <VirtualHost *:80>
                ServerName backend.dev
-               DocumentRoot "/caminho/para/aplicacao-yii/backend/web/"
+               DocumentRoot "/caminho/para/aplicacao-yii/backend/"
                
-               <Directory "/caminho/para/aplicacao-yii/backend/web/">
+               <Directory "/caminho/para/aplicacao-yii/backend/">
                    # Utilize o mod_rewrite para suporte a URL amigável
                    RewriteEngine on
                    # Se um diretório ou arquivo existe, usa a requisição diretamente
@@ -148,7 +145,7 @@ para inicializar a aplicação, sendo necessário realizá-los apenas uma vez no
                #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
            
                server_name backend.dev;
-               root        /caminho/para/aplicacao-yii/backend/web/;
+               root        /caminho/para/aplicacao-yii/backend/;
                index       index.php;
            
                access_log  /caminho/para/aplicacao-yii/log/backend-access.log;
@@ -195,7 +192,7 @@ Para se autenticar na aplicação é necessário que primeiro, você se registre
 Então, você pode se autenticar na aplicação com o mesmo endereço de e-mail e senha a qualquer momento.
 
 > PS: caso queira que o template avançado de projetos utilize um único domínio, sendo `/` o frontend e `/admin` o backend, 
-> consulte as [configurações e documentações por Oleg Belostotskiy](https://github.com/mickgeek/yii2-practical-one-domain-config) (apenas inglês).
+> consulte as [configurações e documentações por Oleg Belostotskiy](https://github.com/mickgeek/yii2-advanced-one-domain-config) (apenas inglês).
 
 ## Instalação utilizando Vagrant
 

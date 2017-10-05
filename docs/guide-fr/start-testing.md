@@ -88,7 +88,7 @@ Pour exécuter les tests d'acceptation suivez les étapes ci-dessous :
 1. Démarrez le serveur Web :
 
     ```
-    php -S 127.0.0.1:8080 -t frontend
+    php -S 127.0.0.1:8080 -t frontend/web
     ```
 
 1. Maintenant, vous pouvez exécuter tous les tests disponibles :

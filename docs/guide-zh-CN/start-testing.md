@@ -92,7 +92,7 @@ vendor/bin/codecept run -- -c frontend
 1. 启动web服务器:
 
     ```
-    php -S 127.0.0.1:8080 -t frontend
+    php -S 127.0.0.1:8080 -t frontend/web
     ```
 
 1. 现在可以运行所有可用的测试

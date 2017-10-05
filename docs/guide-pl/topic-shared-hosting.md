@@ -23,7 +23,7 @@ frontend
 ...
 ```
 
-`www` będzie naszym nowym folderem front-endowym, zatem przenieś do niego zawartość `frontend`. Zawartość folderu 
+`www` będzie naszym nowym folderem front-endowym, zatem przenieś do niego zawartość `frontend/web`. Zawartość folderu 
 `backend/web` przenieś za to do `www/admin`. W obu przypadkach będziesz musiał poprawić ścieżki podane w `index.php` 
 i `index-test.php`.
 
@@ -53,7 +53,7 @@ aplikacji back-end w pliku `backend/config/main.php` następująco:
     ],
     'session' => [
         // to jest nazwa ciasteczka sesji używanego do logowania się na back-endzie
-        'name' => 'practical-backend',
+        'name' => 'practical-a-backend',
         'cookieParams' => [
             'path' => '/admin',
         ],
@@ -64,4 +64,4 @@ aplikacji back-end w pliku `backend/config/main.php` następująco:
 ### Alternatywne ustawienia
 
 Jeśli podany tutaj sposób nie działa na Twoim serwerze, wypróbuj 
-[instrukcję, którą stworzył Oleg Belostotskiy](https://github.com/mickgeek/yii2-practical-one-domain-config).
+[instrukcję, którą stworzył Oleg Belostotskiy](https://github.com/mickgeek/yii2-advanced-one-domain-config).

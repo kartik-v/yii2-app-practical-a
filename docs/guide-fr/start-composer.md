@@ -6,9 +6,9 @@ Après avoir installé le modèle de projet, il est conseillé d'ajuster le cont
 ```json
 {
     "name": "kartik-v/yii2-app-practical-a",
-    "description": "Yii 2 Practical-A Project Template",
-    "keywords": ["yii2", "framework", "practical", "project template"],
-    "homepage": "http://www.yiiframework.com/",
+    "description": "Yii 2 Practical A Application Template",
+    "keywords": ["yii2", "framework", "practical", "advanced", "application template"],
+    "homepage": "http://demos.krajee.com/app-practical-a",
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {

@@ -11,19 +11,15 @@
 
 Composer がインストールされていれば、次のコマンドを使ってアプリケーションをインストールすることが出来ます。
 
-    composer global require "fxp/composer-asset-plugin:^1.3.1"
-    composer create-project --prefer-dist kartik-v/yii2-app-practical-a practical-a
+    composer create-project --prefer-dist kartik-v/yii2-app-practical-a yii-application
 
-最初のコマンドは [composer asset plugin](https://github.com/francoispluchino/composer-asset-plugin/) をインストールします。
-これにより、Composer を通じて bower と npm の依存パッケージを管理することが出来るようになります。
-このコマンドは全体で一度だけ走らせれば十分です。
-第二のコマンドは `practical-a` という名前のディレクトリにアドバンストアプリケーションをインストールします。
+のコマンドは `yii-application` という名前のディレクトリにアドバンストアプリケーションをインストールします。
 望むなら別のディレクトリ名を選ぶことも出来ます。
 
 
 ## アーカイブファイルからインストールする
 
-[yiiframework.com](http://www.yiiframework.com/download/) からダウンロードしたアーカイブファイルをウェブルートの直下、`practical` と名付けられたディレクトリに解凍します。
+[yiiframework.com](http://www.yiiframework.com/download/) からダウンロードしたアーカイブファイルをウェブルートの直下、`advanced` と名付けられたディレクトリに解凍します。
 
 その後は、次の項に記載されている指示に従ってください。
 
@@ -36,32 +32,32 @@ Composer がインストールされていれば、次のコマンドを使っ�
 1. コンソールターミナルを開き、`init` コマンドを実行して環境として `dev` を選択します。
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init
+   /path/to/php-bin/php /path/to/yii-application/init
    ```
 
    あるいは、本番サーバでは、非対話モードで `init` を実行します。
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init --env=Production --overwrite=All
+   /path/to/php-bin/php /path/to/yii-application/init --env=Production --overwrite=All
    ```
 
 2. 新しいデータベースを作成し、それに従って `common/config/main-local.php` の `components['db']` の構成情報を修正します。
 
-3. コンソールターミナルを開き、`/path/to/php-bin/php /path/to/practical-a/yii migrate` というコマンドでマイグレーションを適用します。
+3. コンソールターミナルを開き、`/path/to/php-bin/php /path/to/yii-application/yii migrate` というコマンドでマイグレーションを適用します。
 
 4. ウェブサーバのドキュメントルートを設定します。
 
-   - フロントエンドのパスは `/path/to/practical-a/`、URL は `http://frontend/` を使用
-   - バックエンドのパスは `/path/to/practical-a/backend/web/`、URL は `http://backend/` を使用
+   - フロントエンドのパスは `/path/to/yii-application/frontend/`、URL は `http://frontend/` を使用
+   - バックエンドのパスは `/path/to/yii-application/backend/`、URL は `http://backend/` を使用
 
    Apache の場合は、次のように設定することが出来ます。
 
    ```apache
        <VirtualHost *:80>
            ServerName frontend.dev
-           DocumentRoot "/path/to/practical-a/frontend/"
+           DocumentRoot "/path/to/yii-application/frontend/"
            
-           <Directory "/path/to/practical-a/frontend/">
+           <Directory "/path/to/yii-application/frontend/">
                # 綺麗な URL をサポートするために mod_rewrite を使用
                RewriteEngine on
                # ディレクトリまたはファイルがある場合は、リクエストを直接使用
@@ -85,9 +81,9 @@ Composer がインストールされていれば、次のコマンドを使っ�
 
        <VirtualHost *:80>
            ServerName backend.dev
-           DocumentRoot "/path/to/practical-a/backend/web/"
+           DocumentRoot "/path/to/yii-application/backend/"
            
-           <Directory "/path/to/practical-a/backend/web/">
+           <Directory "/path/to/yii-application/backend/">
                # 綺麗な URL をサポートするために mod_rewrite を使用
                RewriteEngine on
                # ディレクトリまたはファイルがある場合は、リクエストを直接使用
@@ -121,11 +117,11 @@ Composer がインストールされていれば、次のコマンドを使っ�
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
 
            server_name frontend.dev;
-           root        /path/to/practical-a/frontend/;
+           root        /path/to/yii-application/frontend/;
            index       index.php;
 
-           access_log  /path/to/practical-a/log/frontend-access.log;
-           error_log   /path/to/practical-a/log/frontend-error.log;
+           access_log  /path/to/yii-application/log/frontend-access.log;
+           error_log   /path/to/yii-application/log/frontend-error.log;
 
            location / {
                # 本当のファイルでないものは全て index.php にリダイレクト
@@ -164,11 +160,11 @@ Composer がインストールされていれば、次のコマンドを使っ�
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
 
            server_name backend.dev;
-           root        /path/to/practical-a/backend/web/;
+           root        /path/to/yii-application/backend/;
            index       index.php;
 
-           access_log  /path/to/practical-a/log/backend-access.log;
-           error_log   /path/to/practical-a/log/backend-error.log;
+           access_log  /path/to/yii-application/log/backend-access.log;
+           error_log   /path/to/yii-application/log/backend-error.log;
 
            location / {
                # 本当のファイルでないものは全て index.php にリダイレクト

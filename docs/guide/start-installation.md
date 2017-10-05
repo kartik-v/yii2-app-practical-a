@@ -12,18 +12,18 @@ If you do not have [Composer](http://getcomposer.org/), follow the instructions 
 
 With Composer installed, you can then install the application using the following commands:
 
-    composer global require "fxp/composer-asset-plugin:^1.3.1"
-    composer create-project --prefer-dist kartik-v/yii2-app-practical-a practical-a
+    composer create-project --prefer-dist kartik-v/yii2-app-practical-a yii-application
 
-The first command installs the [composer asset plugin](https://github.com/francoispluchino/composer-asset-plugin/)
-which allows managing bower and npm package dependencies through Composer. You only need to run this command
-once for all. The second command installs the practical-a application in a directory named `practical-a`.
+The command installs the practical-a application in a directory named `yii-application`. You can choose a different
+directory name if you want.
+
 You can choose a different directory name if you want.
+It uses [asset-packagist](https://asset-packagist.org/) for managing bower and npm package dependencies through Composer. Also you can use [asset-plugin](https://packagist.org/packages/fxp/composer-asset-plugin), as in earlier versions, but it works slowly.
 
 ## Install from an Archive File
 
 Extract the archive file downloaded from [yiiframework.com](http://www.yiiframework.com/download/) to
-a directory named `practical` that is directly under the Web root.
+a directory named `practical-a` that is directly under the Web root.
 
 Then follow the instructions given in the next subsection.
 
@@ -36,32 +36,32 @@ the installed application. You only need to do these once for all.
 1. Open a console terminal, execute the `init` command and select `dev` as environment.
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init
+   /path/to/php-bin/php /path/to/yii-application/init
    ```
 
    If you automate it with a script you can execute `init` in non-interactive mode.
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init --env=Production --overwrite=All
+   /path/to/php-bin/php /path/to/yii-application/init --env=Production --overwrite=All
    ```
 
 2. Create a new database and adjust the `components['db']` configuration in `common/config/main-local.php` accordingly.
 
-3. Open a console terminal, apply migrations with command `/path/to/php-bin/php /path/to/practical-a/yii migrate`.
+3. Open a console terminal, apply migrations with command `/path/to/php-bin/php /path/to/yii-application/yii migrate`.
 
 4. Set document roots of your web server:
 
-   - for frontend `/path/to/practical-a/` and using the URL `http://frontend.dev/`
-   - for backend `/path/to/practical-a/backend/web/` and using the URL `http://backend.dev/`
+   - for frontend `/path/to/yii-application/frontend/` and using the URL `http://frontend.dev/`
+   - for backend `/path/to/yii-application/backend/` and using the URL `http://backend.dev/`
 
    For Apache it could be the following:
 
    ```apache
        <VirtualHost *:80>
            ServerName frontend.dev
-           DocumentRoot "/path/to/practical-a/frontend/"
+           DocumentRoot "/path/to/yii-application/frontend/"
            
-           <Directory "/path/to/practical-a/frontend/">
+           <Directory "/path/to/yii-application/frontend/">
                # use mod_rewrite for pretty URL support
                RewriteEngine on
                # If a directory or a file exists, use the request directly
@@ -85,9 +85,9 @@ the installed application. You only need to do these once for all.
        
        <VirtualHost *:80>
            ServerName backend.dev
-           DocumentRoot "/path/to/practical-a/backend/web/"
+           DocumentRoot "/path/to/yii-application/backend/"
            
-           <Directory "/path/to/practical-a/backend/web/">
+           <Directory "/path/to/yii-application/backend/">
                # use mod_rewrite for pretty URL support
                RewriteEngine on
                # If a directory or a file exists, use the request directly
@@ -121,11 +121,11 @@ the installed application. You only need to do these once for all.
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
 
            server_name frontend.dev;
-           root        /path/to/practical-a/frontend/;
+           root        /path/to/yii-application/frontend/;
            index       index.php;
 
-           access_log  /path/to/practical-a/log/frontend-access.log;
-           error_log   /path/to/practical-a/log/frontend-error.log;
+           access_log  /path/to/yii-application/log/frontend-access.log;
+           error_log   /path/to/yii-application/log/frontend-error.log;
 
            location / {
                # Redirect everything that isn't a real file to index.php
@@ -164,11 +164,11 @@ the installed application. You only need to do these once for all.
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
        
            server_name backend.dev;
-           root        /path/to/practical-a/backend/web/;
+           root        /path/to/yii-application/backend/;
            index       index.php;
        
-           access_log  /path/to/practical-a/log/backend-access.log;
-           error_log   /path/to/practical-a/log/backend-error.log;
+           access_log  /path/to/yii-application/log/backend-access.log;
+           error_log   /path/to/yii-application/log/backend-error.log;
        
            location / {
                # Redirect everything that isn't a real file to index.php
@@ -216,8 +216,8 @@ To login into the application, you need to first sign up, with any of your email
 Then, you can login into the application with same email address and password at any time.
 
 
-> Note: if you want to run practical template on a single domain so `/` is frontend and `/admin` is backend, refer
-> to [Using practical project template at shared hosting](topic-shared-hosting.md).
+> Note: if you want to run advanced template on a single domain so `/` is frontend and `/admin` is backend, refer
+> to [Using advanced project template at shared hosting](topic-shared-hosting.md).
 
 ## Installing using Vagrant
 

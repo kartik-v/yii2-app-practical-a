@@ -12,15 +12,13 @@
 
 安装Composer后，您可以使用以下命令安装应用程序：
 
-    composer global require "fxp/composer-asset-plugin:^1.3.1"
-    composer create-project --prefer-dist kartik-v/yii2-app-practical-a practical-a
+    composer create-project --prefer-dist kartik-v/yii2-app-practical-a yii-application
 
-第一个命令安装 [composer asset插件](https://github.com/francoispluchino/composer-asset-plugin/)
-第一个命令安装composer asset插件，它允许通过Composer管理bower和npm包依赖。 您只需要为所有运行此命令一次。 第二个命令将高级应用程序安装在名为 `practical-a` 的目录中。 如果需要，您可以选择不同的目录名称。 
+个命令将高级应用程序安装在名为 `yii-application` 的目录中。 如果需要，您可以选择不同的目录名称。 
 
 ## 从归档文件安装
 
-将从 [yiiframework.com](http://www.yiiframework.com/download/) 下载的归档文件解压缩到直接位于Web根目录下的名为practical的目录。
+将从 [yiiframework.com](http://www.yiiframework.com/download/) 下载的归档文件解压缩到直接位于Web根目录下的名为advanced的目录。
 
 然后按照下一小节中给出的说明进行操作。
 
@@ -32,32 +30,32 @@
 1. 打开控制台终端，执行 `init` 命令并选择 `dev` 作为环境。
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init
+   /path/to/php-bin/php /path/to/yii-application/init
    ```
 
    如果使用脚本自动化，可以在非交互模式下执行 `init` 。
 
    ```
-   /path/to/php-bin/php /path/to/practical-a/init --env=Production --overwrite=All
+   /path/to/php-bin/php /path/to/yii-application/init --env=Production --overwrite=All
    ```
 
 2. 创建一个新的数据库，并相应地调整 `common/config/main-local.php` 中的 `components['db']` 配置。
 
-3. 打开控制台终端，执行迁移命令 `/path/to/php-bin/php /path/to/practical-a/yii migrate`.
+3. 打开控制台终端，执行迁移命令 `/path/to/php-bin/php /path/to/yii-application/yii migrate`.
 
 4. 设置Web服务器的文档根目录：
 
-   - 对于前端 `/path/to/practical-a/` 并且使用URL `http://frontend.dev/`
-   - 对于后端 `/path/to/practical-a/backend/web/` 并且使用URL `http://backend.dev/`
+   - 对于前端 `/path/to/yii-application/frontend/` 并且使用URL `http://frontend.dev/`
+   - 对于后端 `/path/to/yii-application/backend/` 并且使用URL `http://backend.dev/`
 
    对于Apache，使用如下配置：
 
    ```apache
        <VirtualHost *:80>
            ServerName frontend.dev
-           DocumentRoot "/path/to/practical-a/frontend/"
+           DocumentRoot "/path/to/yii-application/frontend/"
            
-           <Directory "/path/to/practical-a/frontend/">
+           <Directory "/path/to/yii-application/frontend/">
                # use mod_rewrite for pretty URL support
                RewriteEngine on
                # If a directory or a file exists, use the request directly
@@ -75,9 +73,9 @@
        
        <VirtualHost *:80>
            ServerName backend.dev
-           DocumentRoot "/path/to/practical-a/backend/web/"
+           DocumentRoot "/path/to/yii-application/backend/"
            
-           <Directory "/path/to/practical-a/backend/web/">
+           <Directory "/path/to/yii-application/backend/">
                # use mod_rewrite for pretty URL support
                RewriteEngine on
                # If a directory or a file exists, use the request directly
@@ -105,11 +103,11 @@
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
 
            server_name frontend.dev;
-           root        /path/to/practical-a/frontend/;
+           root        /path/to/yii-application/frontend/;
            index       index.php;
 
-           access_log  /path/to/practical-a/log/frontend-access.log;
-           error_log   /path/to/practical-a/log/frontend-error.log;
+           access_log  /path/to/yii-application/log/frontend-access.log;
+           error_log   /path/to/yii-application/log/frontend-error.log;
 
            location / {
                # Redirect everything that isn't a real file to index.php
@@ -148,11 +146,11 @@
            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
        
            server_name backend.dev;
-           root        /path/to/practical-a/backend/web/;
+           root        /path/to/yii-application/backend/;
            index       index.php;
        
-           access_log  /path/to/practical-a/log/backend-access.log;
-           error_log   /path/to/practical-a/log/backend-error.log;
+           access_log  /path/to/yii-application/log/backend-access.log;
+           error_log   /path/to/yii-application/log/backend-error.log;
        
            location / {
                # Redirect everything that isn't a real file to index.php
